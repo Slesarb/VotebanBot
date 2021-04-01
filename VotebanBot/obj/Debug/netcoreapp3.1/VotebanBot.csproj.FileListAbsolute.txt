@@ -1,0 +1,16 @@
+D:\code\VotebanBot\VotebanBot\obj\Debug\netcoreapp3.1\VotebanBot.csprojAssemblyReference.cache
+D:\code\VotebanBot\VotebanBot\obj\Debug\netcoreapp3.1\VotebanBot.AssemblyInfoInputs.cache
+D:\code\VotebanBot\VotebanBot\obj\Debug\netcoreapp3.1\VotebanBot.AssemblyInfo.cs
+D:\code\VotebanBot\VotebanBot\obj\Debug\netcoreapp3.1\VotebanBot.csproj.CoreCompileInputs.cache
+D:\code\VotebanBot\VotebanBot\bin\Debug\netcoreapp3.1\VotebanBot.exe
+D:\code\VotebanBot\VotebanBot\bin\Debug\netcoreapp3.1\VotebanBot.deps.json
+D:\code\VotebanBot\VotebanBot\bin\Debug\netcoreapp3.1\VotebanBot.runtimeconfig.json
+D:\code\VotebanBot\VotebanBot\bin\Debug\netcoreapp3.1\VotebanBot.runtimeconfig.dev.json
+D:\code\VotebanBot\VotebanBot\bin\Debug\netcoreapp3.1\VotebanBot.dll
+D:\code\VotebanBot\VotebanBot\bin\Debug\netcoreapp3.1\VotebanBot.pdb
+D:\code\VotebanBot\VotebanBot\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\code\VotebanBot\VotebanBot\bin\Debug\netcoreapp3.1\Telegram.Bot.dll
+D:\code\VotebanBot\VotebanBot\obj\Debug\netcoreapp3.1\VotebanBot.csproj.CopyComplete
+D:\code\VotebanBot\VotebanBot\obj\Debug\netcoreapp3.1\VotebanBot.dll
+D:\code\VotebanBot\VotebanBot\obj\Debug\netcoreapp3.1\VotebanBot.pdb
+D:\code\VotebanBot\VotebanBot\obj\Debug\netcoreapp3.1\VotebanBot.genruntimeconfig.cache
