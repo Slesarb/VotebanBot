@@ -29,8 +29,11 @@ namespace VotebanBot
             {
                 foreach (var cmd in commands)
                 {
-                    if (cmd.Contains(e.Message.Text))
+                    if (cmd.Contains(message.Text))
+                    {
                         cmd.Execute(message, client);
+                    }
+                        
                 }
             }
         }
