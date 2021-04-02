@@ -9,10 +9,11 @@ namespace VotebanBot
 {
     class Programm
     {
-        private static TelegramBotClient client = new TelegramBotClient(BotConfig.botToken);
+        private static TelegramBotClient client;
         private static List<Command.Command> commands = new List<Command.Command>();
         static void Main(string[] args)
         {
+            client = new TelegramBotClient(BotConfig.botToken);
             commands.Add(new HelpCommand());
             commands.Add(new BanCommand());
             client.StartReceiving();

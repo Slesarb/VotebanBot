@@ -25,18 +25,20 @@ namespace VotebanBot.Command.Commands
             {
                 if (user.Key.Contains(username, StringComparison.InvariantCultureIgnoreCase)) 
                 {
+                    ChatMember userToBan = client.GetChatMemberAsync(message.Chat.Id, user.Value).Result;
                     //client.KickChatMemberAsync(message.Chat.Id, user.Value);
                     foreach (var admin in admins)
                     {
                         if (user.Value == admin.User.Id)
                         {
-                            client.SendTextMessageAsync(message.Chat.Id, "Щупальца убрал, he's the Owner");
+                            client.SendTextMessageAsync(message.Chat.Id, "Щупальца убрал, он тут босс"); 
                             return;
                         }
                             
                     }
-                    
-                    client.SendTextMessageAsync(message.Chat.Id, $"user {username.TrimEnd()} banned");
+
+                    client.SendTextMessageAsync(message.Chat.Id, $"user {userToBan.User.FirstName + " " + userToBan.User.LastName} banned");
+                    client.KickChatMemberAsync(message.Chat.Id, user.Value);
                 }
               //  else
                     //client.SendTextMessageAsync(message.Chat.Id, "no such user with username: " + username);
