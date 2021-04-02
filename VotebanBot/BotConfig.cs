@@ -16,7 +16,7 @@ namespace VotebanBot
             {"Дима Диван Диман Дмитрий looser pacific @icinga_1312",  -1},
             {"Ржакабот мемы @super_rjaka_demotivator_bot",  1016409811},
             {"Миша Mikhail Voronin",  374758888}
-        
+
         };
         
     }
