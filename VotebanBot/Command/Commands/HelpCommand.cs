@@ -12,7 +12,7 @@ namespace VotebanBot.Command.Commands
 
         public override void Execute(Message message, TelegramBotClient client)
         {
-            client.SendTextMessageAsync(message.Chat.Id, "help message here");
+            client.SendTextMessageAsync(message.Chat.Id, "Welcome to Voteban bot! A simple bot that bans the users by your request.\nType /voteban @username if you want to kick this user from a groupchat");
         }
     }
 }
