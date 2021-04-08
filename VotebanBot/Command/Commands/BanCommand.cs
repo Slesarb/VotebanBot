@@ -13,6 +13,7 @@ namespace VotebanBot.Command.Commands
 
         public override void Execute(Message message, TelegramBotClient client)
         {
+            Console.WriteLine(message.From.Id.ToString() + message.From.FirstName.ToString());
             ChatMember bot = client.GetChatMemberAsync(message.Chat.Id, 1735511247).Result;
             if (!(bot.Status.ToString() == "Administrator"))
                 client.SendTextMessageAsync(message.Chat.Id, "I'm not an Admin of this chat. so i can't kick the other users");
@@ -32,7 +33,10 @@ namespace VotebanBot.Command.Commands
                 {
                     ChatMember userToBan = client.GetChatMemberAsync(message.Chat.Id, user.Value).Result;
                     if (userToBan.User.Id == 374758888)
+                    { 
                         client.SendTextMessageAsync(message.Chat.Id, "Пошли нахуй, да? Неблагодарные");
+                        return;
+                    }    
                     //client.KickChatMemberAsync(message.Chat.Id, user.Value);
                     if (userToBan.Status.ToString() == "Creator")
                     {
@@ -50,7 +54,7 @@ namespace VotebanBot.Command.Commands
                         
                     else
                         usersVoted[userToBan.User.Id].Add(message.From.Id);
-                    if (usersVoted[userToBan.User.Id].Count >= memberCount / 2 + 1)
+                    if (usersVoted[userToBan.User.Id].Count >= memberCount / 2)
                     {
                         client.SendTextMessageAsync(message.Chat.Id, $"user {userToBan.User.FirstName + " " + userToBan.User.LastName} banned");
                         client.KickChatMemberAsync(message.Chat.Id, user.Value);
@@ -58,7 +62,7 @@ namespace VotebanBot.Command.Commands
                     }
                     else
                     {
-                        client.SendTextMessageAsync(message.Chat.Id, $"{usersVoted[userToBan.User.Id].Count} / {memberCount / 2 + 1} users has voted to ban {userToBan.User.FirstName + " " + userToBan.User.LastName}");
+                        client.SendTextMessageAsync(message.Chat.Id, $"{usersVoted[userToBan.User.Id].Count} / {memberCount / 2} users has voted to ban {userToBan.User.FirstName + " " + userToBan.User.LastName}");
                     }
                 }
 
